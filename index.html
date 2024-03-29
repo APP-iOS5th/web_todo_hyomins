@@ -11,22 +11,55 @@
     <style></style>
   </head>
   <body>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <h1 class="mt-5 text-center">Todo List</h1>
-          <!-- 입력부분 -->
-          <div class="input-group mb-3 mt-3">
-            <input
-              type="text"
-              class="form-control"
-              id="todoInput"
-              placeholder="New talk"
-            />
-            <button class="btn btn-primary" id="addTodo">Add</button>
+    <div class="container" style="height: 100vh">
+      <div class="row justify-content-center" style="height: 100%">
+        <div
+          class="col-6"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid lightgray;
+            border-radius: 12px;
+            margin: 15px;
+          "
+        >
+          <div class="todoListBody">
+            <h1 class="mt-5 text-center">Todo List</h1>
+            <!-- 입력부분 -->
+            <div class="input-group mb-3 mt-3">
+              <input
+                type="text"
+                class="form-control"
+                id="todoInput"
+                placeholder="New talk"
+              />
+              <button class="btn btn-primary" id="addTodo">Add</button>
+            </div>
+            <!-- 리스트 -->
+            <ul class="list-group" id="todoList"></ul>
           </div>
-          <!-- 리스트 -->
-          <ul class="list-group" id="todoList"></ul>
+          <!-- 페이지네이션 -->
+          <nav
+            aria-label="Page navigation example"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
